@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portafolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="images/mifoto.jpg">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Fraunces:wght@600;800&display=swap" rel="stylesheet">
+  <style>
+    
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">JCA</div>
+      <div>
+        <div style="font-weight:700">Camilo Amezquita</div>
+        <div style="font-size:12px;color:var(--muted)">Desarrollador • Diseñador</div>
+      </div>
+      <nav>
+        <a class="nav-link" href="#about">Sobre mí</a>
+        <a class="nav-link" href="#skills">Habilidades</a>
+        <a class="nav-link" href="#projects">Proyectos</a>
+        <button class="theme-toggle" id="themeBtn">🌙</button>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-card">
+        <h1>Hola, soy <span style="background:var(--accent);-webkit-background-clip:text;background-clip:text;color:transparent;">Camilo Amezquita</span></h1>
+        <p class="subtitle">Creo interfaces limpias, productos interactivos y código organizado. yo hago tu idea realidad.</p>
+        <button class="btn-primary" onclick="window.open('https://hvperson.netlify.app/','_blank')">ver CV</button>
+      </div>
+      <div class="profile">
+        <div class="avatar">
+          <img src="images/mifoto.jpg" alt="Mi foto">
+        </div>
+        <div class="role">Frontend</div>
+        <div style="font-size:13px;color:var(--muted)">Colombia</div>
+      </div>
+    </section>
+
+    <section id="about" class="grid-2">
+      <div class="card">
+        <h3>Sobre mí</h3>
+        <p style="color:var(--muted)">Soy un desarrollador apasionado por la web, diseño visual y experiencias de usuario. Me gusta combinar creatividad y lógica para construir soluciones digitales modernas.</p>
+      </div>
+      <div class="card">
+        <h3>Datos rápidos</h3>
+        <ul class="list">
+          <li>📍 Ubicación: Colombia</li>
+          <li>💼 Rol: Frontend</li>
+          <li>🎓 Formación: Tecnologo en programacion</li>
+          <li>🎯 Objetivo: Crear experiencias memorables</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="skills" class="grid-2">
+  <div class="card">
+    <h3>Habilidades técnicas</h3>
+    <div class="skill">
+      <div class="skill-name">HTML</div>
+      <div class="skill-bar"><div class="skill-fill" style="width:95%"></div></div>
+    </div>
+    <div class="skill">
+      <div class="skill-name">CSS</div>
+      <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
+    </div>
+    <div class="skill">
+      <div class="skill-name">JavaScript</div>
+      <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
+    </div>
+    <div class="skill">
+      <div class="skill-name">Git flow</div>
+      <div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Herramientas</h3>
+    <ul class="list herramientas">
+      <li>
+        <img src="images/netliify.png" alt="Netlify" class="logo">
+      </li>
+      <li>
+        <img src="images/flow.png" alt="Git / GitHub" class="logo">
+      </li>
+      <li>
+        <img src="images/code.png" alt="VS Code" class="logo">
+      </li>
+    </ul>
+  </div>
+</section>
+
+
+    <section id="projects">
+      <h2>Proyectos destacados</h2>
+      <div class="projects-grid">
+        <div class="project">
+          <div class="thumb" style="background-image:url('images/proyecjunior.png')"></div>
+          <div class="project-content">
+            <h4>Compra y venta junior</h4>
+            <p>Pagina para mostrar todo el trabajo de junior.</p>
+            <a href="https://comunityjunior.netlify.app/" target="_blank">Ver Proyecto</a>
+          </div>
+        </div>
+
+        <div class="project">
+          <div class="thumb" style="background-image:url('images/proyecanime.png')"></div>
+          <div class="project-content">
+            <h4>Arena anime</h4>
+            <p>Una arena donde con cartas escojes a tu personaje favorito y lo llevas a la batalla.</p>
+            <a href="https://arenaanime.netlify.app/" target="_blank">Ver Proyecto</a>
+          </div>
+        </div>
+
+        <div class="project">
+          <div class="thumb" style="background-image:url('images/proyecfunfusion.png')"></div>
+          <div class="project-content">
+            <h4>Fun Fusion</h4>
+            <p>Pagina para un nuevo negocio de entretenimiento.</p>
+            <a href="https://funfusiom.netlify.app/" target="_blank">Ver Proyecto</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 💬 Reseñas -->
+        <section id="reviews">
+      <h2 style="margin-top:40px;">Reseñas</h2>
+      <div class="reviews-grid">
+        <div class="review">
+          <div class="review-header">
+            <img src="images/junior.png" alt="Foto cliente">
+            <div>
+              <strong>junior</strong>
+              <div class="review-role">Cliente</div>
+            </div>
+          </div>
+          <div class="review-stars">
+            ★★★★★
+          </div>
+          <p class="review-text">
+            “Trabajar con Juan fue excelente. Cumplió con los tiempos, aportó ideas y logró un resultado profesional. ¡Totalmente recomendado!”
+          </p>
+        </div>
+
+        <div class="review">
+          <div class="review-header">
+            <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Foto cliente">
+            <div>
+              <strong>María Gómez</strong>
+              <div class="review-role">Cliente</div>
+            </div>
+          </div>
+          <div class="review-stars">
+            ★★★★★
+          </div>
+          <p class="review-text">
+            “Su trabajo fue impecable, con mucha atención al detalle. Me encantó la comunicación y la calidad del código.”
+          </p>
+        </div>
+
+        <div class="review">
+          <div class="review-header">
+            <img src="https://randomuser.me/api/portraits/men/66.jpg" alt="Foto cliente">
+            <div>
+              <strong>Andrés López</strong>
+              <div class="review-role">cliente</div>
+            </div>
+          </div>
+          <div class="review-stars">
+            ★★★★☆
+          </div>
+          <p class="review-text">
+            “Excelente colaborador. Siempre disponible para resolver dudas y muy profesional en cada entrega.”
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+  <script>
+    const btn = document.getElementById('themeBtn');
+    btn.addEventListener('click', ()=>{
+      document.body.classList.toggle('light');
+      btn.textContent = document.body.classList.contains('light') ? '☀️' : '🌙';
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

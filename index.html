@@ -5,13 +5,20 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Portafolio</title>
   <link rel="stylesheet" href="styles.css">
+  <script type="module" src="script.js"></script>
   <link rel="icon" type="image/png" href="images/mifoto.jpg">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Fraunces:wght@600;800&display=swap" rel="stylesheet">
-  <style>
-    
-  </style>
 </head>
 <body>
+  <!-- Video para modo oscuro -->
+  <video autoplay muted loop id="bg-video-dark">
+    <source src="images/espacio.mp4" type="video/mp4">
+  </video>
+  <!-- Video para modo claro -->
+  <video autoplay muted loop id="bg-video-light">
+    <source src="images/colores.mp4" type="video/mp4">
+  </video>
+
   <div class="wrap">
     <header>
       <div class="logo">JCA</div>
@@ -19,12 +26,17 @@
         <div style="font-weight:700">Camilo Amezquita</div>
         <div style="font-size:12px;color:var(--muted)">Desarrollador • Diseñador</div>
       </div>
-      <nav>
+
+      <!-- 🔹 Menú principal -->
+      <nav id="mainNav">
         <a class="nav-link" href="#about">Sobre mí</a>
         <a class="nav-link" href="#skills">Habilidades</a>
         <a class="nav-link" href="#projects">Proyectos</a>
         <button class="theme-toggle" id="themeBtn">🌙</button>
       </nav>
+
+      <!-- 🔹 Botón menú hamburguesa -->
+      <button id="menu-toggle" class="menu-toggle">☰</button>
     </header>
 
     <section class="hero">
@@ -59,52 +71,83 @@
     </section>
 
     <section id="skills" class="grid-2">
-  <div class="card">
-    <h3>Habilidades técnicas</h3>
-    <div class="skill">
-      <div class="skill-name">HTML</div>
-      <div class="skill-bar"><div class="skill-fill" style="width:95%"></div></div>
-    </div>
-    <div class="skill">
-      <div class="skill-name">CSS</div>
-      <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
-    </div>
-    <div class="skill">
-      <div class="skill-name">JavaScript</div>
-      <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
-    </div>
-    <div class="skill">
-      <div class="skill-name">Git flow</div>
-      <div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div>
-    </div>
-  </div>
+      <div class="card">
+        <h3>Habilidades técnicas</h3>
+        <div class="skill">
+          <div class="skill-name">HTML</div>
+          <div class="skill-bar"><div class="skill-fill" style="width:100%"></div></div>
+        </div>
+        <div class="skill">
+          <div class="skill-name">CSS</div>
+          <div class="skill-bar"><div class="skill-fill" style="width:100%"></div></div>
+        </div>
+        <div class="skill">
+          <div class="skill-name">JavaScript</div>
+          <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
+        </div>
+        <div class="skill">
+          <div class="skill-name">Git flow</div>
+          <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
+        </div>
+        <div class="skill">
+          <div class="skill-name">MySQL</div>
+          <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
+        </div>
+      </div>
 
-  <div class="card">
-    <h3>Herramientas</h3>
-    <ul class="list herramientas">
-      <li>
-        <img src="images/netliify.png" alt="Netlify" class="logo">
-      </li>
-      <li>
-        <img src="images/flow.png" alt="Git / GitHub" class="logo">
-      </li>
-      <li>
-        <img src="images/code.png" alt="VS Code" class="logo">
-      </li>
-    </ul>
-  </div>
-</section>
+      <div class="card">
+        <h3>Herramientas</h3>
+        <div class="tools-glass">
+          <div class="tool-glass" data-color="#00d4ff">
+            <img src="images/netliify.png" alt="Netlify">
+          </div>
+          <div class="tool-glass" data-color="#ff8a00">
+            <img src="images/flow.png" alt="Git / GitHub">
+          </div>
+          <div class="tool-glass" data-color="#7a00ff">
+            <img src="images/code.png" alt="VS Code">
+          </div>
+        </div>
+      </div>
+    </section>
 
-
+    <!-- 🔹 Carrusel en móviles -->
     <section id="projects">
       <h2>Proyectos destacados</h2>
-      <div class="projects-grid">
+      <div class="projects-grid" id="carousel">
         <div class="project">
           <div class="thumb" style="background-image:url('images/proyecjunior.png')"></div>
           <div class="project-content">
             <h4>Compra y venta junior</h4>
             <p>Pagina para mostrar todo el trabajo de junior.</p>
             <a href="https://comunityjunior.netlify.app/" target="_blank">Ver Proyecto</a>
+          </div>
+        </div>
+
+        <div class="project">
+          <div class="thumb" style="background-image:url('images/proyecanime.png')"></div>
+          <div class="project-content">
+            <h4>Arena anime</h4>
+            <p>Una arena donde con cartas escojes a tu personaje favorito y lo llevas a la batalla.</p>
+            <a href="https://arenaanime.netlify.app/" target="_blank">Ver Proyecto</a>
+          </div>
+        </div>
+
+        <div class="project">
+          <div class="thumb" style="background-image:url('images/proyecanime.png')"></div>
+          <div class="project-content">
+            <h4>Arena anime</h4>
+            <p>Una arena donde con cartas escojes a tu personaje favorito y lo llevas a la batalla.</p>
+            <a href="https://arenaanime.netlify.app/" target="_blank">Ver Proyecto</a>
+          </div>
+        </div>
+
+        <div class="project">
+          <div class="thumb" style="background-image:url('images/proyecanime.png')"></div>
+          <div class="project-content">
+            <h4>Arena anime</h4>
+            <p>Una arena donde con cartas escojes a tu personaje favorito y lo llevas a la batalla.</p>
+            <a href="https://arenaanime.netlify.app/" target="_blank">Ver Proyecto</a>
           </div>
         </div>
 
@@ -129,7 +172,7 @@
     </section>
 
     <!-- 💬 Reseñas -->
-        <section id="reviews">
+    <section id="reviews">
       <h2 style="margin-top:40px;">Reseñas</h2>
       <div class="reviews-grid">
         <div class="review">
@@ -140,12 +183,8 @@
               <div class="review-role">Cliente</div>
             </div>
           </div>
-          <div class="review-stars">
-            ★★★★★
-          </div>
-          <p class="review-text">
-            “Trabajar con Juan fue excelente. Cumplió con los tiempos, aportó ideas y logró un resultado profesional. ¡Totalmente recomendado!”
-          </p>
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">“Trabajar con Juan fue excelente. Cumplió con los tiempos, aportó ideas y logró un resultado profesional. ¡Totalmente recomendado!”</p>
         </div>
 
         <div class="review">
@@ -156,14 +195,46 @@
               <div class="review-role">Cliente</div>
             </div>
           </div>
-          <div class="review-stars">
-            ★★★★★
-          </div>
-          <p class="review-text">
-            “Su trabajo fue impecable, con mucha atención al detalle. Me encantó la comunicación y la calidad del código.”
-          </p>
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">“Su trabajo fue impecable, con mucha atención al detalle. Me encantó la comunicación y la calidad del código.”</p>
         </div>
 
+        <div class="review">
+          <div class="review-header">
+            <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Foto cliente">
+            <div>
+              <strong>María Gómez</strong>
+              <div class="review-role">Cliente</div>
+            </div>
+          </div>
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">“Su trabajo fue impecable, con mucha atención al detalle. Me encantó la comunicación y la calidad del código.”</p>
+        </div>
+
+        <div class="review">
+          <div class="review-header">
+            <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Foto cliente">
+            <div>
+              <strong>María Gómez</strong>
+              <div class="review-role">Cliente</div>
+            </div>
+          </div>
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">“Su trabajo fue impecable, con mucha atención al detalle. Me encantó la comunicación y la calidad del código.”</p>
+        </div>
+
+        <div class="review">
+          <div class="review-header">
+            <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Foto cliente">
+            <div>
+              <strong>María Gómez</strong>
+              <div class="review-role">Cliente</div>
+            </div>
+          </div>
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">“Su trabajo fue impecable, con mucha atención al detalle. Me encantó la comunicación y la calidad del código.”</p>
+        </div>
+        
         <div class="review">
           <div class="review-header">
             <img src="https://randomuser.me/api/portraits/men/66.jpg" alt="Foto cliente">
@@ -172,24 +243,12 @@
               <div class="review-role">cliente</div>
             </div>
           </div>
-          <div class="review-stars">
-            ★★★★☆
-          </div>
-          <p class="review-text">
-            “Excelente colaborador. Siempre disponible para resolver dudas y muy profesional en cada entrega.”
-          </p>
+          <div class="review-stars">★★★★☆</div>
+          <p class="review-text">“Excelente colaborador. Siempre disponible para resolver dudas y muy profesional en cada entrega.”</p>
         </div>
       </div>
     </section>
-
-
-  <script>
-    const btn = document.getElementById('themeBtn');
-    btn.addEventListener('click', ()=>{
-      document.body.classList.toggle('light');
-      btn.textContent = document.body.classList.contains('light') ? '☀️' : '🌙';
-    });
-  </script>
+  </div>
 </body>
 </html>
 

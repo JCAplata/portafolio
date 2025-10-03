@@ -290,17 +290,43 @@ body.light #bg-video-dark {
   }
 }
 
-/* 🔹 Carrusel (solo en móvil) */
-@media(max-width:600px) {
-  .projects-grid {
+/* Carrusel automático en reseñas (igual que proyectos) */
+@media(max-width:900px) {
+  .reviews-grid {
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     gap: 20px;
     padding-bottom: 10px;
   }
-  .project {
+  .review {
     flex: 0 0 80%;
     scroll-snap-align: center;
   }
 }
+/* 🔄 Carrusel infinito: Proyectos y Reseñas */
+.projects-grid,
+.reviews-grid {
+  display: flex;            /* Cambia de grid a flex para animación continua */
+  overflow: hidden;
+}
+
+.project,
+.review {
+  flex: 0 0 calc(100% / 3); /* 3 en escritorio */
+}
+
+@media (max-width: 900px) {
+  .project,
+  .review {
+    flex: 0 0 50%; /* 2 en tablets */
+  }
+}
+
+@media (max-width: 600px) {
+  .project,
+  .review {
+    flex: 0 0 100%; /* 1 en móviles */
+  }
+}
+
